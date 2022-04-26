@@ -12,16 +12,19 @@ stats selection_sort(std::vector<int>& data)
 	stats selection_sort_stats = {0 ,0};
 	for (int i = 0; i < data.size()-1; i++)
 	{
+		int min = i;
 		for (int j = i + 1; j < data.size(); j++)
 		{
 			selection_sort_stats.comparison_count++;
-			if (data[j] < data[i])
-			{
-				selection_sort_stats.copy_count++;
-				int temp = data[j];
-				data[j] = data[i];
-				data[i] = temp;
-			}
+			if (data[j] < data[min])
+				min = j;
+		}
+		if (min != i)
+		{
+			selection_sort_stats.copy_count++;
+			int temp = data[i];
+			data[i] = data[min];
+			data[min] = temp;
 		}
 	}
 
