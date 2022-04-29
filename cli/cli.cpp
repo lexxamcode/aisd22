@@ -113,9 +113,9 @@ stats** all_stats(stats(*f)(std::vector<int>&), const std::string& path)
 
 int main()
 {
-	//all_stats(selection_sort, "../selection_sort.txt");
-	//all_stats(cocktail_sort, "../cocktail_sort.txt");
-	//all_stats(comb_sort, "../comb_sort.txt");
+	all_stats(selection_sort, "../selection_sort.txt");
+	all_stats(cocktail_sort, "../cocktail_sort.txt");
+	all_stats(comb_sort, "../comb_sort.txt");
 	save_sorted_SR_measurements();
 	return 0;
 }

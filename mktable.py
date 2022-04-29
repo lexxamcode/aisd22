@@ -42,4 +42,3 @@ if __name__ == '__main__':
 	saveSort('selection_sort')
 	saveSort('cocktail_sort')
 	saveSort('comb_sort')
-	
